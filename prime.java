@@ -6,35 +6,37 @@ public class prime {
         
 
         Scanner sc=new Scanner(System.in);
-
-        System.out.println("Enter the value of T :");
-        int t=sc.nextInt();
+        int t;
+        System.out.println("The value of t :");
+        t=sc.nextInt();
 
         for(int i=0;i<t;i++)
         {
             int n=sc.nextInt();
 
             int count=0;
-            for(int d=2;d*d<=n;d++)
+            for(int d=2;d*d<=n;d++)  //n->root n if the number is not divisible than it cannot be divisible any further 
             {
-
                 if(n%d==0)
                 {
                     count++;
                     break;
+
                 }
 
             }
             if(count==0)
             {
-                System.out.println("Prime number ");
-
+                System.out.println("Prime number");
             }else
             {
                 System.out.println("Non prime number");
             }
-                
         }
+
+
+
+        
     }
     
 }
