@@ -1,39 +1,37 @@
 import java.util.*;
 public class Linear
 {
+
+    public static  int linear(int[] nums,int tar)
+    {
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]==tar)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+
+
+    }
     public static void main(String[] args) {
         
 
-        int n[]={20,24,30,40,50};
-        int target=50;
+        int nums[]={23,34,56,88,90};
+        int tar=78;
 
-        int res=linearSearch(n,target);
+        int res=linear(nums,tar);
 
-        
-        if(res != -1)
+        if(res!=-1)
         {
-            System.out.println("Element found :"+res);
+        System.out.println("Target found on index :"+res);
+
         }else
         {
-            System.out.println("Element not found");
+            System.out.println("Target not found ");
         }
+}
 
-       
-
-    }
-    public static int linearSearch(int[] n ,int target)
-        {
-
-            for(int i=0;i<=n.length;i++)
-            {
-                if(n[i]==target)
-                {
-                    return i;
-                }
-            }
-            return -1;
-            
-        }
-
-    
 }
