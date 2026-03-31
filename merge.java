@@ -15,18 +15,18 @@ public class merge {
     public static void mergeArrays(int[] arr,int l,int mid,int r)
     {
 
-        int b1=mid - l + 1;
-        int b2=r-mid;
+        int b1=mid - l + 1;//2-0+1=3; total first 3 array elements;
+        int b2=r-mid;//5-2=3  total last 3 array elements;
         int larr[]=new int[b1];
         int rarr[]=new int[b2];   
 
         for(int x=0;x<b1;x++)
         {
-            larr[x]=arr[l+x];
+            larr[x]=arr[l+x];//0,1,2
         }
         for(int x=0;x<b2;x++)
         {
-            rarr[x]=arr[mid+1+x];
+            rarr[x]=arr[mid+1+x];//3,4,5
         }
 
         int i=0;
